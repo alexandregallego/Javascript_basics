@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Functions</title>
+  </head>
+  <body>
+    <script>
+      function function1() {
+        console.log('Hello');
+        console.log(2 + 2);
+      }
+
+      function1();
+
+      /* Rules for function names
+        - Can not use special words: function.
+        - Can not start with a number.
+        - Can not use special characters except: $_
+        - Use a ver or action.
+        - The script element runs when the page is loaded.
+        - If inside a function we have a return without anything specified it will result in
+        undefined. Once we return, it is not gonna run anything after the return.
+        - Generally it is best practice to keep variables inside a scope if we can. Instead of using global variables.
+      */
+
+      /* 
+      Rules for paramter names
+        - Can not use special words.
+        - Can not start with a number.
+        - Can not use special characters except: $ _
+
+      Best practice is to use camelCase.
+
+      A parameter only exists inside the function's scope. A function can have more than one parameter.
+
+      NaN value means not a number.
+      */
+
+      function calculateTax(cost, taxPercent = 0.1) {
+        console.log(cost * taxPercent);
+      }
+
+      calculateTax(2000, 0.1);
+      calculateTax(1000);
+    </script>
+  </body>
+</html>
