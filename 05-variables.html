@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Variables</title>
+  </head>
+  <body>
+    <script>
+
+      // Here I am assigning a value to a variable.
+      let variable1 = 3;
+      console.log(variable1);
+
+      // We can use a variable wherever we use a value.
+      let calculation = 2 + 2;
+      console.log(calculation);
+      console.log(calculation + 2);
+
+      let result = calculation + 2;
+      console.log(result);
+
+      let message = 'hello';
+      console.log(message); 
+      // We need semicolons to separate different instructions in JavaScript.
+      console.log(';');
+
+      // Here I am reassigning a value to a variable already created in line 10.
+      variable1 = 5;
+      console.log(variable1)
+
+      variable1 = variable1 + 1;
+      console.log(variable1);
+
+      const variable2 = 3; // this value stays constant we can not change it.
+
+      // Best practice is to use const as default and only use let when we want to change the value of the variable.
+
+      var variable3 = 3; // this is the original way to create variables in JavaScript. Although it has same issues, but not used in new JavaScript code only in old.
+
+      console.log(typeof 3);
+
+      // let creates a new variable
+      /*
+      Variable name restrictions.
+        - We can not use special words like let
+        - We can not start a variable name with a number
+        - We can use numbers in the middle or in the end
+        - Can not use special characters except: $ and _
+      */
+    </script>
+  </body>
+</html>
