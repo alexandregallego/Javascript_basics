@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      /*
+      The product object is composed of two properties name and price in this case.
+
+      An object is a property-value pair.
+      If we a access a property that does not exist, we will get the result undefined.
+
+      Objects make our code more organized. Instead of creating multiple variables, we can create all these related values into one object. Let us group multiple values together and let us use multiple values together.
+      
+      const product = {
+        name: 'socks',
+        price: 1090
+      };
+      console.log(typeof product);
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      product.name = 'cotton socks'
+      console.log(product.name);
+      product.newProperty = true;
+      console.log(product.newProperty);
+
+      delete product.newProperty;
+      console.log(product);
+      */
+
+      /*const product2 = {
+        name: 'shirt',
+        ['delivery-time']: '1 day',
+        rating: {
+          stars: 4.5,
+          count: 87
+        },
+        fun: function function1() {
+          console.log('function inside object');
+        }
+      };
+
+      console.log(product2);
+      console.log(product2['name']);
+
+      console.log(product2['delivery-time']);
+      console.log(product2.rating.stars);
+      console.log(product2.rating.count);
+      product2.fun();
+
+      console.log(typeof console.log);
+      console.log(typeof console);
+
+      console.log(JSON.stringify(product2));
+      console.log(typeof JSON.stringify(product2));
+
+      const jsonString = JSON.stringify(product2);
+
+      console.log(JSON.parse(jsonString));
+      console.log(typeof JSON.parse(jsonString));
+
+      */
+      /* Bracket notation lets us use properties that do not work with dot notation.
+      
+      Use dot notation by default because it is shorter and easier to read. For properties that do not work with dot notation, we use bracket notation.
+      
+      Inside an object we can store any type of value: booleans, strings, numbers, etc.
+
+      The product2 is called a nested object because inside rating property we have another object. A function is another type of value in JavaScript and we can save them in an object.
+
+      When we save functions inside an object this is called methods.
+
+      Console object and Math objects are examples of built-in objects. Such as JSON and localStorage.
+
+      JSON helps us work with JSON. This is a syntax, which is similar to JavaScript object but has less features.
+
+      In JSON syntax all properties and strings must use double quotes. JSON does not support functions and single quotes.
+
+      A JavaScript object only makes sense only in JavaScript. JSON syntax can be understood in any other programming language and therefore is more general. We use JSON when we send data between computers that might use different programming languages.
+
+      We use JSON when we store data too. The JSON built-in object helps us convert a JavaScript object into JSON.
+
+      The result of the stringify method from JSON object is actually a string.
+
+      JSON.parse() converts JSON into a JavaScript object.
+
+      Next built-in object is localStorage which is used to save values more permanently.
+
+      Variables are temporary, they only exist on the current page. If we refresh or close the page, all variables are deleted. However, when you load the result into localStorage, the result does not get deleted when you refresh the page. localStorage only supports strings.
+
+      When something does not exist in localStorage it is gonna give us the value of null. Check ResetScore button functionality for rock, paper, scissors example.
+      */
+
+      console.log('hello'.length);
+      console.log('hello'.toUpperCase());
+
+      /*
+      JavaScript automatically wraps a string, number and booleans in a special object and this is called auto-boxing. But this does not work with null and undefined.
+      */
+
+      const object1 = {
+        message: 'hello'
+      };
+
+      const object2 = object1;
+
+      object1.message = 'Good job!';
+      console.log(object1);
+      console.log(object2);
+
+
+      const object3 = {
+        message: 'Good job!'
+      };
+
+      console.log(object1 === object3);
+      console.log(object1 === object2);
+
+      const object4 = {
+        message: 'Good job!',
+        price: 799
+      };
+
+      //const message = object4.message
+      const { message, price } = object4
+
+      console.log(message);
+      console.log(price);
+
+      const object5 = {
+        //message: message,
+        message,
+        //method: function function1() {
+        //  console.log('method');
+        //}
+        method() {
+          console.log('method')
+        }
+      };
+      console.log(object5);
+      console.log(object5.method());
+      /* When creating an object the actual value it is created in the computer's memory but the variable name is stored somwhere else as a reference, to where the object is stored in your computer's memory. This work like this to make the language more efficient.
+
+      In command 108 we are not copying the object in memory over and over again, we are just copying its reference, which is much faster. This is called copy by reference. Object1 and object2 point to the same object in memory. This is why when we changed the property in object1 it also gets propagated to object2 as we can see in command 112.
+
+      In an object, even if we use const we can still change the values within that object.
+
+      We can not compare objects directly. Even though they have the same values inside, since objects are references and comparison takes into account the reference not the actual values inside the objects. But since object1 and object2 point to the same reference, the comparison returns true.
+
+      The line of code of 126 does the same thing as the line of code of command 127. This is called destructuring shortcut.
+
+      The shortcut from line 135 does the same thing as line 134. This shortcut is called shorthand property. The line 139 is called shorthand method.
+      */
+    </script>
+  </body>
+</html>
