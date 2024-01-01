@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>9c exercise</title>
+    </head>
+    <body>
+        <button class="js-heads-button">heads</button>
+        <button class="js-tails-button">tails</button>
+        <p class="js-decision"></p>
+    </body>
+    <script>
+        function chooseValue(value) {
+            document.querySelector('.js-decision')
+                .innerHTML = `You chose: ${value}`;
+        }
+
+        document.querySelector('.js-heads-button')
+            .addEventListener('click', () => {
+                chooseValue('heads');
+            });
+        
+        document.querySelector('.js-tails-button')
+            .addEventListener('click', () => {
+                chooseValue('tails');
+            });
+    </script>
+</html>
