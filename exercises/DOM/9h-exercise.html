@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>9h exercise</title>
+    </head>
+    <body>
+        <input class="js-input">
+        <p class="js-key-up"></p>
+    </body>
+    <script>
+        function printKey() {
+            const nameElement = document.querySelector('.js-input');
+            let name = nameElement.value;
+            document.querySelector('.js-key-up')
+                .innerHTML = `${name}`;
+        }
+
+        document.querySelector('.js-input')
+            .addEventListener('keyup', () => {
+                printKey();
+            })
+    </script>
+</html>
