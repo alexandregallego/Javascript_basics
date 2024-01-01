@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9g exercise</title>
+  </head>
+  <body>
+    <p>YouTube Subscribe Button</p>
+    <button onclick="
+    subscribe();
+    " class="js-subscribe-button">Subscribe</button>
+
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost of order" class="js-cost-input"
+    onkeydown="
+    handleCostKeyDown(event);
+    ">
+    <button onclick="
+    calculateTotal();
+    ">Calculate</button>
+    <p class="js-total-cost"></p>
+    <script>
+
+      function calculateTotal() {
+        const inputElement = document.querySelector('.js-cost-input');
+        
+        let cost = Number(inputElement.value);
+
+        if (cost < 40) {
+          cost += 10;
+          cost = cost.toFixed(2);
+        } 
+
+        document.querySelector('.js-total-cost')
+          .innerHTML = `$${cost}`;
+      }
+
+      function subscribe() {
+        const buttonElement = document.querySelector('.js-subscribe-button');
+
+        if (buttonElement.innerText === 'Subscribe') {
+          buttonElement.innerHTML = 'Subscribed';
+        } else {
+          buttonElement.innerHTML = 'Subscribe';
+        }
+      }
+
+      function handleCostKeyDown(event) {
+        if (event.key === 'Enter') {
+          calculateTotal();
+        }
+      }
+
+      /* The input HTML element does not need a closing tag, and this is called a void element. */
+
+      /* the steps to be followed in the amazon shipping calculator are the following:
+        - Get the text in the text box.
+        - If amount <$40, add $10.
+        - Display total on the page.
+
+      .value will give us the text inside the text box.
+
+      Whenever we get a value from the DOM, we will get it as a string. if we want to do math with it, we need to manually convert it to a number.
+
+      The Number function automatically converts whatever it is between the brackets into a number.
+
+      clicks and keydowns are known as events. The HTML attributes onclick and onkeydown are known as event listeners.
+
+      When we press a key:
+        - Check if the key is "Enter".
+        - If it is do the same thing as the calculatebutton.
+
+      Every event listener gets an event object.
+
+      The built-in String function will convert a value into a string.
+      */
+    </script>
+  </body>
+</html>
