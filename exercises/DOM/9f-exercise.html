@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>9f exercise</title>
+    </head>
+    <body>
+        <input placeholder="Name" class="js-name-input">
+        <button class="js-submit-button">Submit</button>
+        <p class="js-name"></p>
+    </body>
+    <script>
+        function printName() {
+            const nameElement = document.querySelector('.js-name-input');
+            let name = nameElement.value;
+            document.querySelector('.js-name')
+                .innerHTML = `Your name is: ${name}`;
+        }
+
+        document.querySelector('.js-submit-button')
+            .addEventListener('click', () => {
+            printName()});
+
+        document.querySelector('.js-name-input')
+            .addEventListener('keydown', (event) => {
+                if (event.key === 'Enter') {
+                    printName();
+                }
+            });
+    </script>
+</html>
